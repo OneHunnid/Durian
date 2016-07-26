@@ -1,13 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router'
+import CSSModules from 'react-css-modules'
+import styles from './mainLayout.css'
 
-export default class MainLayout extends React.Component {
+class MainLayout extends React.Component {
   constructor(props) {
     super(props)
   }
   render() {
     return (
-      <div>
+      <div styleName='container'>
         <header>
           <h1><Link to="/">Durian</Link></h1>
         </header>
@@ -18,3 +20,5 @@ export default class MainLayout extends React.Component {
     )
   }
 }
+
+export default CSSModules(MainLayout, styles );
