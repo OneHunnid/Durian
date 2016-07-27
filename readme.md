@@ -1,3 +1,3 @@
 # Durian
 
-A React, Redux and Webpack Starter Kit.
+A React, Redux, CSS Modules and Webpack Starter Kit.

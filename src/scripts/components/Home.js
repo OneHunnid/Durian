@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { fetchMessage } from './../actions/fetchMessage'
 
 @connect((store) => {
-  console.log(store)
   return {
     message: store.retrieveMessage.message,
     dispatch: store
@@ -18,7 +17,6 @@ export default class Home extends React.Component {
     this.props.dispatch(fetchMessage());
   }
   render() {
-    console.log(this.props.data)
     if (this.props.message === undefined) {
       return (
         <div>Loading...</div>

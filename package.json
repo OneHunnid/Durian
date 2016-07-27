@@ -4,7 +4,8 @@
   "description": "React, Redux, Webpack Starter Kit",
   "main": "webpack.config.js",
   "scripts": {
-    "dev": "webpack-dev-server --content-base build --inline --hot"
+    "dev": "webpack-dev-server --content-base build --inline --hot",
+    "start": "node server.js"
   },
   "author": "Chris Limbrick",
   "license": "ISC",

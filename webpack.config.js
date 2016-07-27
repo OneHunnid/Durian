@@ -1,16 +1,30 @@
-var debug = process.env.NODE_ENV !== "production";
 var webpack = require('webpack');
+var path = require('path');
 ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  context: __dirname+"/app",
-  devtool: debug ? "inline-sourcemap" : null,
-  entry: "./scripts/index.js",
+  entry: [
+    'webpack-dev-server/client?http://localhost:8080',
+    'webpack/hot/dev-server',
+    './src/scripts/index'
+  ],
+  output: {
+    path: path.join(__dirname, 'dist'),
+    filename: 'bundle.js',
+    publicPath: '/static/'
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new ExtractTextPlugin('bundle.css', {
+        allChunks: true
+    }),
+  ],
   module: {
     loaders: [
       {
         test: /\.js?$/,
         exclude: /(node_modules|bower_components)/,
+        include: path.join(__dirname, 'src'),
         loader: 'babel-loader',
         query: {
           presets: ['react', 'es2015', 'stage-0'],
@@ -18,26 +32,9 @@ module.exports = {
         }
       },
       {
-          test: /\.css$/,
-            loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]')
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]')
       }
     ]
-  },
-  output: {
-    path: __dirname + "/build/",
-    publicPath: "/build/scripts",
-    filename: "build.js"
-  },
-  plugins: [
-    new ExtractTextPlugin('build.css', {
-        allChunks: true
-    }),
-  ],
+  }
 };
-
-
-// debug ? [] : [
-//   new webpack.optimize.DedupePlugin(),
-//   new webpack.optimize.OccurenceOrderPlugin(),
-//   new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
-// ],
