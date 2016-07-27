@@ -10,6 +10,7 @@
   "author": "Chris Limbrick",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^6.3.7",
     "babel-core": "^6.11.4",
     "babel-loader": "^6.2.4",
     "babel-plugin-add-module-exports": "^0.2.1",
@@ -21,6 +22,7 @@
     "babel-preset-stage-0": "^6.5.0",
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^1.0.1",
+    "postcss-loader": "^0.9.1",
     "react": "^15.2.1",
     "react-css-modules": "^3.7.8",
     "react-dom": "^15.2.1",
