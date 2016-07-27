@@ -1,11 +1,10 @@
 {
   "name": "durian",
   "version": "1.0.0",
-  "description": "React, Redux, Webpack Starter Kit",
+  "description": "React, Redux, CSS Modules, Webpack Starter Kit",
   "main": "webpack.config.js",
   "scripts": {
-    "dev": "webpack-dev-server --content-base build --inline --hot",
-    "start": "node server.js"
+    "dev": "node server.js"
   },
   "author": "Chris Limbrick",
   "license": "ISC",
