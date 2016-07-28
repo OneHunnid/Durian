@@ -6,7 +6,7 @@ const retrieveMessage = (state={}, action) => {
     case 'FETCH_MESSAGE':
       return {
         ...state,
-        message: "A React, Redux and Webpack Starter Kit"
+        message: "A React, Redux, CSS Modules and Webpack Starter Kit"
       }
     default:
       return state
