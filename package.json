@@ -1,7 +1,7 @@
 {
   "name": "durian",
   "version": "1.0.0",
-  "description": "React, Redux, CSS Modules, Webpack Starter Kit",
+  "description": "React, Redux, and Sass Webpack Starter Kit",
   "main": "webpack.config.js",
   "scripts": {
     "dev": "webpack-dashboard -- node server.js"
