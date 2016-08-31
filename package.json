@@ -4,7 +4,7 @@
   "description": "React, Redux, CSS Modules, Webpack Starter Kit",
   "main": "webpack.config.js",
   "scripts": {
-    "dev": "node server.js"
+    "dev": "webpack-dashboard -- node server.js"
   },
   "author": "Chris Limbrick",
   "license": "ISC",
@@ -22,6 +22,7 @@
     "css-loader": "^0.23.1",
     "express": "^4.14.0",
     "extract-text-webpack-plugin": "^1.0.1",
+    "node-sass": "^3.8.0",
     "passport": "^0.3.2",
     "passport-google": "^0.3.0",
     "postcss-loader": "^0.9.1",
@@ -35,8 +36,10 @@
     "redux-logger": "^2.6.1",
     "redux-promise": "^0.5.3",
     "redux-thunk": "^2.1.0",
+    "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1",
+    "webpack-dashboard": "^0.1.8",
     "webpack-dev-server": "^1.14.1"
   }
 }
